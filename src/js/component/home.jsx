@@ -1,26 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+//   Importing the useState() hook.
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  //I set a state: a variable which is a state and can change.
+  let [counter, setCounter] = useState(10); //By default is 10, when the browser loads.
+  const increaseHandler = () => {
+    setCounter((prevState) => prevState + 1);
+  };
+  const decreaseHandler = () => {
+    setCounter((prevState) => prevState - 1);
+  };
+  return (
+    <div className="mg">
+      <h1>So this is my counter...</h1>
+	  <h2>The current value is {counter}.</h2>
+	  <button onClick={decreaseHandler}>Decrease</button>&nbsp;
+	  <button onClick={increaseHandler}>Increase</button>
+    </div>
+  );
 };
 
 export default Home;

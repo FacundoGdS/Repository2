@@ -10,3 +10,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.mg {
+    margin-left: 430px;
+    margin-top: 10px;
+}
