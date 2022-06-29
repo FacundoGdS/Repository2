@@ -7,7 +7,7 @@ const Home = () => {
   const [amount, setAmount] = useState(1);
 
   const increaseHandler = () => {
-    setCounter((prevState) => prevState + amount);
+    setCounter((prevState) => prevState + amount); //It is valid to put (counter => counter + 1)
   };
   const decreaseHandler = () => {
     setCounter((prevState) => prevState - amount);
